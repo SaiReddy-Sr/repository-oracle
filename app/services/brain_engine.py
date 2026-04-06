@@ -6,8 +6,8 @@ from app.models.schemas import AnalyzeResponse
 def analyze_repo(codebase_text: str) -> AnalyzeResponse:
     genai.configure(api_key=os.environ["GEMINI_API_KEY"])
     
-    # We will use Gemini 1.5 Pro to process the potentially large codebase
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    # We will use Gemini 2.5 Pro to process the potentially large codebase
+    model = genai.GenerativeModel('gemini-2.5-pro')
     
     prompt = f"""
 You are an expert AI Architect and technical marketer. Look at the following codebase text and generate three things:
